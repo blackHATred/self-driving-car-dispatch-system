@@ -1,0 +1,5 @@
+/.env
+/docker/admin.dockerfile
+/docker/server.dockerfile
+/config/localhost.pem
+/config/localhost-key.pem

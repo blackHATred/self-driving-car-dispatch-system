@@ -1,0 +1,69 @@
+# Во всех последующих запросах в заголовке должен быть указан X-Secret: <secret>. Будем подразумевать, что
+# сервер был запущен без заданной переменной окружения SECRET_KEY, т.е. secret = "".
+
+### Добавление пользователя-диспетчера в систему с доступом к ТС с id 1, 2, 3
+POST 0.0.0.0:8080/admin/dispatcher
+Content-Type: application/json
+X-Secret:
+
+{
+"password": "example",
+"grants_type": "list",
+"grants": [1, 2, 3]
+}
+
+### Добавление пользователя-диспетчера в систему с доступом ко всем ТС
+POST 0.0.0.0:8080/admin/dispatcher
+Content-Type: application/json
+X-Secret:
+
+{
+  "password": "example",
+  "grants_type": "all"
+}
+
+### Редактирование пользователя-диспетчера под id=1
+PUT 0.0.0.0:8080/admin/dispatcher
+Content-Type: application/json
+X-Secret:
+
+{
+  "id": 2,
+  "password": "example",
+  "grants_type": "all"
+}
+
+### Удаление пользователя-диспетчера с id=1 из системы
+DELETE 0.0.0.0:8080/admin/dispatcher/1
+X-Secret:
+
+### Получение диспетчера с id=2.
+GET 0.0.0.0:8080/admin/dispatcher/2
+X-Secret:
+
+### Добавление ТС в систему
+POST 0.0.0.0:8080/admin/vehicle
+Content-Type: application/json
+X-Secret:
+
+{
+  "password": "example"
+}
+
+### Добавление второго ТС в систему
+POST 0.0.0.0:8080/admin/vehicle
+Content-Type: application/json
+X-Secret:
+
+{
+"password": "example"
+}
+
+### Удаляем ТС с id=1
+DELETE 0.0.0.0:8080/admin/vehicle/1
+X-Secret:
+
+### Получение ТС с id=2
+GET 0.0.0.0:8080/admin/vehicle/2
+X-Secret:
+

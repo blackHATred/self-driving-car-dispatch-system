@@ -1,0 +1,6 @@
+database_url: "0.0.0.0:6379"
+database_number: 0
+vehicle_host: "0.0.0.0"
+vehicle_port: 4242
+dispatcher_host: "0.0.0.0"
+dispatcher_port: 4243
