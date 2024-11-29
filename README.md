@@ -1,9 +1,7 @@
 ## Пример работы приложения
 
-<video width="600" controls>
-  <source src="assets/execution_example.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/15f1ed34-d378-46b7-89e7-c1d0694014be
+
 
 
 ### Ссылки
